@@ -18,9 +18,21 @@
     <div class="logowrap">
       <img class="logoimg" src="./assets/mslogo.jpg" alt="">
     </div>
-    <mat-card-content class="btnwrap">
-      <button mat-raised-button mat-button color="primary">{{currentVal}}$</button>
-      <button class="fl-r" mat-raised-button mat-button color="accent">{{expectedVal}}$</button>
+    <mat-card-content>
+      <section class="btnwrap">
+        <button mat-raised-button mat-button color="primary">{{currentVal}}$</button>
+        <button class="fl-r" mat-raised-button mat-button color="accent">{{expectedVal}}$</button>
+      </section>
+      <br>
+      <section>
+        <form>
+          <button type="button" (click)="decrement($event)" mat-raised-button mat-button color="primary">-</button>
+          <mat-form-field floatLabel="never" class="amount">
+            <input matInput placeholder="0.0$" [(ngModel)]="value" name="value">
+          </mat-form-field>
+          <button type="button" (click)="increment($event)" class="fl-r" mat-raised-button mat-button color="accent">+</button>
+        </form>
+      </section>
     </mat-card-content>
   </mat-card>
 </section>

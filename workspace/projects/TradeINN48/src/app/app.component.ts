@@ -6,12 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'TradeINN48';
+  title = 'FIS - TradeINN48';
   currentVal: number;
   expectedVal: number;
+  value = 0;
 
   ngOnInit(): void {
     this.currentVal = 100;
     this.expectedVal = 105;
+  }
+
+  decrement(e) {
+    e.stopPropagation();
+    --this.value;
+  }
+
+  increment(e) {
+    e.stopPropagation();
+    ++this.value;
   }
 }

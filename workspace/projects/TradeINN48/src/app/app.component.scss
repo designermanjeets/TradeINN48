@@ -24,7 +24,9 @@ svg#clouds {
 .logowrap { text-align: center; display: block; }
 .logoimg { max-width: 400px; max-height: 200px; }
 .btnwrap { padding-top: 25px; }
+.amount { margin-left: 10px; }
 
 @media all and ( max-width : 700px) {
     .logoimg { max-width: 100%; }
+    .cardwrapper { margin: 10px auto 0; max-width: 95%; }
 }
