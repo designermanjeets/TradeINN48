@@ -25,12 +25,12 @@
       </section>
       <br>
       <section>
-        <form>
-          <button type="button" (click)="decrement($event)" mat-raised-button mat-button color="primary">-</button>
+        <form #tradeForm="ngForm">
+          <button type="button" (click)="decrement()" mat-raised-button mat-button color="primary">-</button>
           <mat-form-field floatLabel="never" class="amount">
-            <input matInput placeholder="0.0$" [(ngModel)]="value" name="value">
+            <input matInput placeholder="0.0$" [(ngModel)]="model.value" name="value">
           </mat-form-field>
-          <button type="button" (click)="increment($event)" class="fl-r" mat-raised-button mat-button color="accent">+</button>
+          <button type="button" (click)="increment()" class="fl-r" mat-raised-button mat-button color="accent">+</button>
         </form>
       </section>
     </mat-card-content>
